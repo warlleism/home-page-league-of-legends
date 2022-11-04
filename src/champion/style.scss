@@ -11,12 +11,29 @@
     -moz-box-shadow: -2px -124px 112px 140px #030608;
     -webkit-box-shadow: -2px -124px 112px 140px #030608;
 
+    .cloud {
+        opacity: 0;
+        height: 90%;
+        width: 200%;
+        z-index: 99;
+        position: absolute;
+        transition: 1s ease-in-out;
+        transform: translateX(200vh);
+        animation: cloud 28s infinite;
+    }
+
+    @keyframes cloud {
+        100% {
+            transform: translateX(-270vh);
+        }
+    }
 
     .champion {
         width: 50%;
         opacity: 0;
         height: 100%;
         display: flex;
+        z-index: 9999;
         position: relative;
         align-items: center;
         justify-content: center;
@@ -25,9 +42,9 @@
         .akali-img {
             z-index: 2;
             left: 160px;
-            cursor: pointer;
             max-width: 900px;
             position: absolute;
+            transition: .5s ease-in-out;
         }
 
         .bar {
@@ -55,6 +72,7 @@
     }
 
     .champion-info {
+        z-index: 9999;
         width: 20%;
         opacity: 0;
         height: 100%;
@@ -67,8 +85,34 @@
 
 
         h1 {
-            color: white;
+            color: #fff;
             font-size: 10rem;
+            text-align: center;
+            text-shadow:
+                1px -1px 0 #fff,
+                2px -2px 0 #fff,
+                3px -3px 0 #fff,
+                4px -4px 0 #fff,
+                5px -5px 0 #fff,
+                6px -6px 0 #242424,
+                7px -7px 0 #242424,
+                8px -8px 0 #242424,
+                9px -9px 0 #242424,
+                10px -10px 0 #242424,
+                11px -11px 0 #242424,
+                12px -12px 0 #242424,
+                13px -13px 12px rgba(0, 0, 0, 0.55),
+                13px -13px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        :root {
+            --bg: #CECEFE;
+            --col: #33A1D1
+        }
+
+        h1::after {
+            background: var(--bg);
+            color: var(--col);
         }
 
 

@@ -21,11 +21,16 @@ const Champion = () => {
         let tela = parseInt(window.scrollY);
         const akali = document.getElementById('content-akali');
         const info = document.getElementById('info-content-akali');
+        const cloud = document.getElementById('cloud');
 
         console.log(tela)
 
         if (tela >= 2572) {
             akali.style.opacity = 1
+            
+            setTimeout(() => {
+                cloud.style.opacity = 1
+            }, 900)
 
             setTimeout(() => {
                 info.style.opacity = 1
@@ -87,7 +92,9 @@ const Champion = () => {
             backgroundSize: "cover",
         }}>
 
-            <div className="shadow"></div>
+            <img className="cloud" id="cloud" src={require('../image/cloud.png')} alt="" />
+
+            <div className="shadow" ></div>
 
             <div className="champion" id="content-akali">
                 <img className="akali-img" src={akali} alt="" />
