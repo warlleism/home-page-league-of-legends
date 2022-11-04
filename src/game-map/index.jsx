@@ -9,7 +9,7 @@ const Map = () => {
         const video = document.getElementById('conteudo');
         const content_info = document.getElementById('conteudo-info');
 
-        if (tela >= 2198) {
+        if (tela >= 3872) {
             video.style.opacity = 1
             setTimeout(() => {
                 content_info.style.opacity = 1

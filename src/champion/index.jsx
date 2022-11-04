@@ -5,28 +5,56 @@ import './style.scss'
 
 const Champion = () => {
 
+
     const [akali, setAkali] = useState(require("../image/akali1.png"))
-
-    window.addEventListener('scroll', () => {
-
-        let tela = parseInt(window.scrollY);
-
-        const video = document.getElementById('conteudo');
-        const content_info = document.getElementById('conteudo-info');
-
-        if (tela >= 2198) {
-            video.style.opacity = 1
-            setTimeout(() => {
-                content_info.style.opacity = 1
-            }, 2000)
-        }
-    })
 
     useEffect(() => {
         ShowBar()
     }, [])
 
-  
+    useEffect(() => {
+        AkaliSkin()
+    }, [akali])
+
+    window.addEventListener('scroll', () => {
+
+        let tela = parseInt(window.scrollY);
+        const akali = document.getElementById('content-akali');
+        const info = document.getElementById('info-content-akali');
+
+        console.log(tela)
+
+        if (tela >= 2572) {
+            akali.style.opacity = 1
+
+            setTimeout(() => {
+                info.style.opacity = 1
+            }, 1000)
+        }
+
+
+
+    })
+
+
+    function AkaliSkin() {
+        setTimeout(() => {
+
+            if (akali == require("../image/akali1.png")) {
+                setAkali(require("../image/akali2.png"))
+            }
+            if (akali == require("../image/akali2.png")) {
+                setAkali(require("../image/akali3.png"))
+            }
+            if (akali == require("../image/akali3.png")) {
+                setAkali(require("../image/akali4.png"))
+            }
+            if (akali == require("../image/akali4.png")) {
+                setAkali(require("../image/akali1.png"))
+            }
+        }, 3000)
+    }
+
     function ShowBar() {
         const bar1 = document.getElementById('bar1')
         const bar2 = document.getElementById('bar2')
@@ -61,7 +89,7 @@ const Champion = () => {
 
             <div className="shadow"></div>
 
-            <div className="champion">
+            <div className="champion" id="content-akali">
                 <img className="akali-img" src={akali} alt="" />
                 <div className="bar-top-left bar"></div>
                 <div className="bar-top-left bar" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar1"></div>
@@ -72,7 +100,7 @@ const Champion = () => {
                 <div className="bar-bottom-left bar" ></div>
                 <div className="bar-bottom-left bar" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar4"></div>
             </div>
-            <div className="champion-info">
+            <div className="champion-info" id="info-content-akali">
                 <h2>ARRASE COM</h2>
                 <h1>ESTILO</h1>
                 <h3>Personalize o jogo mudando o visual dos seus Campeões favoritos com skins.</h3>

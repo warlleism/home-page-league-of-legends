@@ -1,7 +1,7 @@
 .container-champion-main {
     z-index: -1;
     display: flex;
-    height: 100vh;
+    height: 130vh;
     margin-top: 100px;
     position: relative;
     justify-content: center;
@@ -14,17 +14,19 @@
 
     .champion {
         width: 50%;
+        opacity: 0;
         height: 100%;
         display: flex;
         position: relative;
         align-items: center;
         justify-content: center;
+        transition: .5s ease-in-out;
 
         .akali-img {
             z-index: 2;
             left: 160px;
             cursor: pointer;
-            max-width: 800px;
+            max-width: 900px;
             position: absolute;
         }
 
@@ -53,13 +55,16 @@
     }
 
     .champion-info {
-        height: 100%;
         width: 20%;
+        opacity: 0;
+        height: 100%;
         display: flex;
         text-align: center;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        transition: .5s ease-in-out;
+
 
         h1 {
             color: white;
