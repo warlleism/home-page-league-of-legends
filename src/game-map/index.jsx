@@ -18,7 +18,7 @@ const Map = () => {
     })
 
     return (
-        <div className="container-map">
+        <div className="container-map-main">
 
             <div className="container-map" id="conteudo">
                 <img src={require('../image/rift-map.png')} alt="" />

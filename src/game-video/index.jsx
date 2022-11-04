@@ -12,39 +12,27 @@ const Game_Video = () => {
         const video = document.getElementById('content');
         const info = document.getElementById('info-content');
 
-        if (tela >= 910) {
+        if (tela >= 1000) {
             video.style.opacity = 1
         }
 
-        if (tela >= 1497) {
+        if (tela >= 1697) {
             info.style.opacity = 1
         }
 
     })
 
-    function AlterBorderColor(event) {
-        const dado = document.getElementById('dado')
-        if (event == 'red') {
-            dado.style.border = 'solid #eb1330d2 2px'
-            dado.style.outline = 'solid #eb1330d2 5px'
-        } else {
-            dado.style.border = 'solid #746e26 2px'
-            dado.style.outline = 'solid #746e26 5px'
-        }
-    }
-
-
-
-
     return (
         <div className="container-video" >
+            <div className="shadow"></div>
+            <img className="backgound-image" src={require('../image/rift.jpg')} alt="" />
             <div className="container-video-content" id="content">
                 <div className="video" id="dado">
                     <video autoPlay loop muted>
                         <source src={Video} type="video/mp4" />
                     </video>
                 </div>
-                <div className="circle" onMouseEnter={() => AlterBorderColor('red')} onMouseLeave={() => AlterBorderColor('default')}></div>
+                <div className="circle"></div>
             </div>
 
             <div className="container-content-play" id="info-content">
@@ -52,9 +40,9 @@ const Game_Video = () => {
                     <h2>VÁRIAS MANEIRAS DE</h2>
                     <h1>JOGAR</h1>
                 </div>
-                <div className="contaienr-info">
-                    <h2>ESCOLHA SEU</h2>
-                    <h1>CAMPEÃO</h1>
+                <div className="contaienr-info" >
+                    <h2 style={{marginLeft: "-130px"}}>ESCOLHA SEU</h2>
+                    <h1 style={{marginLeft: "-130px"}}>CAMPEÃO</h1>
                 </div>
             </div>
         </div>

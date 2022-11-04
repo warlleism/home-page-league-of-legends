@@ -10,6 +10,19 @@
     font-family: 'Stick No Bills', sans-serif;
 }
 
+
+.shadow {
+    top: 50px;
+    z-index: 9999;
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    -webkit-box-shadow: 1px -71px 71px 84px #030608;
+    -moz-box-shadow: 1px -71px 71px 84px #030608;
+    box-shadow: 1px -71px 71px 84px #030608;
+}
+
+
 h1,
 img {
     cursor: pointer;

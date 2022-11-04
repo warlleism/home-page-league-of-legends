@@ -1,15 +1,18 @@
-.container-map {
+.container-map-main {
     display: grid;
     height: 100vh;
-    background-color: black;
+    margin-top: 100px;
+    background-color: #030608;
     grid-template-columns: 60% 40%;
-    box-shadow: black 20px 20px 80px 140px;
+    box-shadow: -2px -124px 112px 140px #030608;
+    -moz-box-shadow: -2px -124px 112px 140px #030608;
+    -webkit-box-shadow: -2px -124px 112px 140px #030608;
 
     .container-map {
         opacity: 0;
-        transition: 1s ease-in-out;
         width: 110%;
         display: flex;
+        transition: 1s ease-in-out;
 
         img {
             z-index: 1;
@@ -41,6 +44,7 @@
             font-size: 20rem;
             transition: .5s ease-in-out;
         }
+
         h1:hover {
             font-size: 21rem;
         }
