@@ -8,12 +8,25 @@
     box-shadow: black 2px 2px 18px;
     background-color: rgba(0, 0, 0, 0.562);
 
+    .logo-riot {
+        z-index: 9999999999999 !important;
+    }
+
+    .logo-lol {
+        z-index: 9999999999999 !important;
+    }
+
     ul {
+        z-index: 2;
         width: 100%;
         display: flex;
         list-style: none;
         flex-direction: row;
         justify-content: space-around;
+
+        .menu-bar {
+            display: none;
+        }
 
         li {
             color: #ffff;
@@ -36,14 +49,108 @@
     width: 100%;
     margin-top: 100px;
     text-align: center;
+    z-index: 999999999;
 
     img {
-        max-width: 800px;
+        z-index: 999999999;
+        max-width: 45%;
         transition: .6s ease-in-out;
     }
 
     img:hover {
         max-width: 900px;
         transition: .6s ease-in-out;
+    }
+}
+
+
+@media screen and (max-width: 1284px) {
+    .nav-bar {
+        ul {
+            justify-content: end;
+
+            .menu-bar {
+                display: block;
+
+                font-size: 4rem;
+                color: #ffff;
+                margin-right: 40px;
+            }
+
+            li {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1284px) {
+
+    .nav-bar {
+        top: 0;
+        z-index: 999999;
+        position: absolute;
+
+        .logo-riot {
+            max-width: 130px !important;
+        }
+
+        .logo-lol {
+            max-width: 50px !important;
+        }
+    }
+
+    .container-logo {
+        position: absolute;
+        height: 300px;
+        width: 100% !important;
+
+        img {
+            max-width: 300px;
+        }
+
+        img:hover {
+            max-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .nav-bar {
+        box-sizing: border-box;
+        width: 100vw;
+        padding: 10px;
+
+        ul {
+            span {
+                position: absolute;
+                right: -40px;
+                top: 7px;
+            }
+        }
+    }
+
+    .container-logo {
+        img {
+            margin-top: 200px;
+            max-width: 370px;
+        }
+
+        img:hover {
+            max-width: 370px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container-logo {
+        img {
+            margin-top: 200px !important;
+            max-width: 280px !important;
+        }
+
+        img:hover {
+            max-width: 280px !important;
+        }
     }
 }

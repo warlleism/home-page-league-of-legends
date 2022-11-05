@@ -20,6 +20,12 @@ const Home = () => {
             }}>
                 <Header />
 
+                <div className="mobile-video">
+                    <video autoPlay loop muted className="background-video">
+                        <source src={lucian} type="video/mp4" />
+                    </video>
+                </div>
+
                 <div className="cards-conteiner" >
                     <div className="card" onMouseEnter={() => setImage(require('../image/legendary.png'))}>
 

@@ -6,6 +6,9 @@
     -moz-box-shadow: inset 1px -96px 36px -19px #030608;
     box-shadow: inset 1px -96px 36px -19px #030608;
 
+    .background-video {
+        display: none;
+    }
 
     .cards-conteiner {
         width: 100%;
@@ -17,7 +20,7 @@
         justify-content: center;
 
         .card {
-            width: 19%;
+            width: 370px;
             height: 280px;
             cursor: auto;
             margin-left: 20px;
@@ -37,7 +40,6 @@
                     top: -5px;
                     opacity: 0;
                     width: 100%;
-                    height: 100%;
                     position: absolute;
                     border-top-left-radius: 15px;
                     border-top-right-radius: 15px;
@@ -126,6 +128,55 @@
         .card:hover>.container-img-video>video {
             opacity: 1;
             transition: 0.7s ease-in-out;
+        }
+
+    }
+}
+
+@media screen and (max-width: 1284px) {
+
+    .home-container {
+
+        .cards-conteiner {
+            .card {
+                width: 370px;
+
+                .container-img-video {
+                    video {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+
+    .home-container {
+        width: 100vw !important;
+        height: 100vh !important;
+
+        .mobile-video {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            .background-video {
+                top: 0px;
+                z-index: -1;
+                left: -430px;
+                margin-left: -420px;
+                height: 100vh;
+                display: block;
+                z-index: 0 !important;
+            }
+        }
+        .cards-conteiner {
+            .card {
+                display: none;
+            }
         }
 
     }
