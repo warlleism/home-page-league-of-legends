@@ -36,11 +36,11 @@ const Game_Video = () => {
             </div>
 
             <div className="container-content-play" id="info-content">
-                <div className="contaienr-info">
+                <div className="contaienr-info mobile-left">
                     <h2>VÁRIAS MANEIRAS DE</h2>
                     <h1>JOGAR</h1>
                 </div>
-                <div className="contaienr-info" >
+                <div className="contaienr-info mobile-right" >
                     <h2 style={{marginLeft: "-130px"}}>ESCOLHA SEU</h2>
                     <h1 style={{marginLeft: "-130px"}}>CAMPEÃO</h1>
                 </div>

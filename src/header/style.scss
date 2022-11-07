@@ -26,6 +26,7 @@
 
         .menu-bar {
             display: none;
+            cursor: pointer;
         }
 
         li {
@@ -115,7 +116,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1284px) {
     .nav-bar {
         box-sizing: border-box;
         width: 100vw;
@@ -132,25 +133,12 @@
 
     .container-logo {
         img {
-            margin-top: 200px;
-            max-width: 370px;
-        }
-
-        img:hover {
-            max-width: 370px;
-        }
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .container-logo {
-        img {
             margin-top: 200px !important;
-            max-width: 280px !important;
+            max-width: 60% !important;
         }
 
         img:hover {
-            max-width: 280px !important;
+            max-width: 100% !important;
         }
     }
 }
