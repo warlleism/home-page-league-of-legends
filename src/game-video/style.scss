@@ -138,16 +138,22 @@
 
 @media screen and (max-width: 1144px) {
 
+    .container-video-content {
+        opacity: 1 !important;
+        top: 100px;
+    }
+
     .container-content-play {
         margin: 0;
-        text-align: center;
-        position: absolute !important;
-        top: 220px !important;
-        z-index: 999999999999;
         border: none;
         display: flex;
-        flex-direction: column;
         text-align: center;
+        text-align: center;
+        opacity: 1 !important;
+        top: 220px !important;
+        z-index: 999999999999;
+        flex-direction: column;
+        position: absolute !important;
 
 
         h1,
@@ -173,15 +179,27 @@
 
 }
 
-@media screen and (max-width: 918px) {
+@media screen and (max-width: 813px) {
+
 
     .container-video {
+        z-index: 999999999999;
+        height: 120vh;
+
+        .backgound-image {
+            filter: brightness(0%) !important;
+        }
+
+        .container-content-play {
+            display: none;
+        }
 
         .container-video-content {
+            height: 130vh;
 
             .video {
-                height: 65%;
-                width: 800px;
+                height: 60%;
+                width: 700px;
             }
 
             .circle {
@@ -192,38 +210,16 @@
 
 }
 
-@media screen and (max-width: 761px) {
+
+@media screen and (max-width: 800px) {
 
     .container-video {
 
-        .container-video-content {
-
-
-            .video {
-                height: 50%;
-                width: 640px;
-            }
-
-
-            .circle {
-                display: none;
-                top: 8.2%;
-                left: -4.9%;
-                width: 880px;
-                height: 880px;
-            }
-        }
-    }
-
-}
-
-@media screen and (max-width: 656px) {
-
-    .container-video {
-        height: 100vh;
+        margin: 0;
+        height: 70vh;
 
         .container-video-content {
-            height: 100vh;
+            height: 60vh;
 
             .video {
                 margin: 0;
@@ -235,43 +231,5 @@
             }
 
         }
-
-        .container-content-play {
-            opacity: 1;
-            top: 50px !important;
-
-            h1,
-            h2 {
-                width: 100vw;
-                font-size: 4rem !important;
-            }
-
-        }
-
     }
-
-    @media screen and (max-width: 556px) {
-
-        .container-video {
-
-            .container-video-content {
-
-
-                .video {
-                    height: 37%;
-                    width: 480px;
-                }
-
-
-                .circle {
-                    display: none;
-                    top: 8.2%;
-                    left: -4.9%;
-                    width: 880px;
-                    height: 880px;
-                }
-            }
-        }
-    }
-
 }
