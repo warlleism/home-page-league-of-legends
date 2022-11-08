@@ -2,6 +2,7 @@
 
 .App {
     overflow: hidden !important;
+    position: relative;
 }
 
 * {
