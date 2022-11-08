@@ -23,11 +23,9 @@ const Champion = () => {
         const info = document.getElementById('info-content-akali');
         const cloud = document.getElementById('cloud');
 
-        console.log(tela)
-
         if (tela >= 2572) {
             akali.style.opacity = 1
-            
+
             setTimeout(() => {
                 cloud.style.opacity = 1
             }, 900)
@@ -61,24 +59,20 @@ const Champion = () => {
     }
 
     function ShowBar() {
-        const bar1 = document.getElementById('bar1')
-        const bar2 = document.getElementById('bar2')
-        const bar3 = document.getElementById('bar3')
-        const bar4 = document.getElementById('bar4')
+
+        const b1 = document.getElementsByClassName('b1')
 
         setInterval(() => {
-            bar1.style.width = "400px"
-            bar2.style.width = "400px"
-            bar3.style.width = "400px"
-            bar4.style.width = "400px"
+            for (let i = 0; i <= b1.length; i++) {
+                b1[i].style.width = "400px"
+            }
         }, 2000)
 
 
         setInterval(() => {
-            bar1.style.width = "0px"
-            bar2.style.width = "0px"
-            bar3.style.width = "0px"
-            bar4.style.width = "0px"
+            for (let i = 0; i <= b1.length; i++) {
+                b1[i].style.width = "0px"
+            }
         }, 4000)
 
     }
@@ -90,22 +84,23 @@ const Champion = () => {
             width: "100%",
             backgroundPosition: "center",
             backgroundSize: "cover",
+            position: "relative"
         }}>
 
             <img className="cloud" id="cloud" src={require('../image/cloud.png')} alt="" />
 
-            <div className="shadow" ></div>
+            <div className="shadow"></div>
 
             <div className="champion" id="content-akali">
                 <img className="akali-img" src={akali} alt="" />
                 <div className="bar-top-left bar"></div>
-                <div className="bar-top-left bar" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar1"></div>
+                <div className="bar-top-left bar b1" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar1"></div>
                 <div className="bar-top-right bar"></div>
-                <div className="bar-top-right bar" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar2"></div>
+                <div className="bar-top-right bar b1" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar2"></div>
                 <div className="bar-bottom-right bar" ></div>
-                <div className="bar-bottom-right bar" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar3"></div>
+                <div className="bar-bottom-right bar b1" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar3"></div>
                 <div className="bar-bottom-left bar" ></div>
-                <div className="bar-bottom-left bar" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar4"></div>
+                <div className="bar-bottom-left bar b1" style={{ background: 'rgb(233, 224, 106)', width: "0px", transition: ".5s" }} id="bar4"></div>
             </div>
             <div className="champion-info" id="info-content-akali">
                 <h2>ARRASE COM</h2>
